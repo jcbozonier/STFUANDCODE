@@ -22,6 +22,7 @@ namespace STFUANDCODE
         public MainWindow()
         {
             InitializeComponent();
+            TextEditor.Focus();
         }
     }
 }
