@@ -102,5 +102,17 @@ namespace STFUANDCODE
             var newSource = Editor.Document.Text;
             UpdateResult(newSource);
         }
+
+        private void RunButton_Click(object sender, RoutedEventArgs e)
+        {
+            var code_to_run = this.Editor.Text;
+
+            if (Directory.Exists("temp"))
+                Directory.Delete("temp", true);
+
+            Directory.CreateDirectory("temp");
+
+            File.WriteAllLines("temp/STFU_and_COMPILE.cs", new[] { code_to_run });
+        }
     }
 }

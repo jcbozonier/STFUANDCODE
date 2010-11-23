@@ -3,3 +3,4 @@ obj
 *.suo
 build
 Gemfile.lock
+temp
