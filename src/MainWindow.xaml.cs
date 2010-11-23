@@ -31,6 +31,18 @@ namespace STFUANDCODE
             DataContext = this;
             Editor.SyntaxHighlighting = HighlightingManager.Instance.GetDefinition("C#");
             this.PreviewKeyUp += (sndr, evt) => { if (evt.Key == Key.F5) STFUAndRunCode(); };
+            this.Editor.Text = 
+@"using System;
+
+public class Foo
+{
+    public static void Main(params string[] args)
+    {
+        // STFU and Code Here!
+        
+    }
+}";
+            Editor.CaretOffset = 137;
         }
 
         private void UpdateResult(string source)
