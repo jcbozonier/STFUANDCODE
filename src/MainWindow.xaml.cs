@@ -16,6 +16,7 @@ using System.Windows.Shapes;
 using System.ComponentModel;
 using ICSharpCode.NRefactory;
 using ICSharpCode.AvalonEdit.Highlighting;
+using System.Diagnostics;
 
 namespace STFUANDCODE
 {
@@ -39,7 +40,6 @@ namespace STFUANDCODE
                 parser.Parse();
                 var parses = parser.Errors.Count == 0;
                 SetParseStatus(parses);
-
                 //var csVisitor = new CsVisitor();
                 //parser.CompilationUnit.AcceptVisitor(csVisitor, null);
             }
@@ -107,12 +107,35 @@ namespace STFUANDCODE
         {
             var code_to_run = this.Editor.Text;
 
-            if (Directory.Exists("temp"))
-                Directory.Delete("temp", true);
+            var code_to_compile = System.IO.Path.GetTempFileName() + ".cs";
+            var executable_path = System.IO.Path.GetTempFileName() + ".exe";
 
-            Directory.CreateDirectory("temp");
+            File.WriteAllLines(code_to_compile, new[] { code_to_run });
 
-            File.WriteAllLines("temp/STFU_and_COMPILE.cs", new[] { code_to_run });
+            var compiler_path = @"C:\Windows\Microsoft.NET\Framework\v4.0.30319\csc.exe";
+
+            using (var compiler_process = new Process())
+            {
+                compiler_process.StartInfo.FileName = compiler_path;
+                compiler_process.StartInfo.Arguments = "/out:" + executable_path + " " + code_to_compile ;
+                compiler_process.StartInfo.UseShellExecute = false;
+                compiler_process.StartInfo.RedirectStandardOutput = true;
+
+                var successfully_compiled = compiler_process.Start();
+                var compiler_messages = compiler_process.StandardOutput.ReadToEnd();
+                File.WriteAllLines("build.log", new[] { compiler_messages });
+                compiler_process.WaitForExit();
+            }
+
+            if (File.Exists(executable_path))
+            {
+                using (var run_process = new Process())
+                {
+                    run_process.StartInfo.FileName = executable_path;
+                    run_process.StartInfo.WorkingDirectory = Directory.GetCurrentDirectory();
+                    run_process.Start();
+                }
+            }
         }
     }
 }
