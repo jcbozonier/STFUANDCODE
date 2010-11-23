@@ -1,8 +1,19 @@
 ﻿<Window x:Class="STFUANDCODE.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="STFU and Code .NET! By Tim Erickson and Justin Bozonier" Height="700" Width="600">
+        xmlns:ctrl="http://icsharpcode.net/sharpdevelop/avalonedit" 
+        Title="STFU and Code .NET! By Tim Erickson and Justin Bozonier" Height="700" Width="600"
+        FocusManager.FocusedElement="{Binding ElementName=Editor}">
     <Grid>
-        <TextBox x:Name="TextEditor" AcceptsReturn="True" AcceptsTab="True" />
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <ctrl:TextEditor x:Name="Editor" TextChanged="Editor_TextChanged"
+			BorderBrush="#CCCCCC" 
+			BorderThickness="1" />
+        <Border Grid.Row="1" Height="20" Background="{Binding ParseStatusBackground}">
+            <TextBlock Text="{Binding ParseStatusText}" />
+        </Border>
     </Grid>
 </Window>
