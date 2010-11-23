@@ -30,6 +30,7 @@ namespace STFUANDCODE
             InitializeComponent();
             DataContext = this;
             Editor.SyntaxHighlighting = HighlightingManager.Instance.GetDefinition("C#");
+            this.PreviewKeyUp += (sndr, evt) => { if (evt.Key == Key.F5) STFUAndRunCode(); };
         }
 
         private void UpdateResult(string source)
@@ -105,6 +106,11 @@ namespace STFUANDCODE
 
         private void RunButton_Click(object sender, RoutedEventArgs e)
         {
+            STFUAndRunCode();
+        }
+
+        private void STFUAndRunCode()
+        {
             var code_to_run = this.Editor.Text;
 
             var code_to_compile = System.IO.Path.GetTempFileName() + ".cs";
@@ -117,7 +123,7 @@ namespace STFUANDCODE
             using (var compiler_process = new Process())
             {
                 compiler_process.StartInfo.FileName = compiler_path;
-                compiler_process.StartInfo.Arguments = "/out:" + executable_path + " " + code_to_compile ;
+                compiler_process.StartInfo.Arguments = "/out:" + executable_path + " " + code_to_compile;
                 compiler_process.StartInfo.UseShellExecute = false;
                 compiler_process.StartInfo.RedirectStandardOutput = true;
 
