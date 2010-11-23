@@ -6,16 +6,20 @@
         FocusManager.FocusedElement="{Binding ElementName=Editor}">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition />
+            <RowDefinition Height="2*" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <ctrl:TextEditor x:Name="Editor" TextChanged="Editor_TextChanged"
+            WordWrap="True"
 			BorderBrush="#CCCCCC" 
 			BorderThickness="1" />
         <Button x:Name="RunButton" Content="STFU and Run!" Grid.Row="1" Click="RunButton_Click" />
         <Border Grid.Row="2" Height="20" Background="{Binding ParseStatusBackground}">
             <TextBlock Text="{Binding ParseStatusText}" />
         </Border>
+        <TextBox IsReadOnly="True" Grid.Row="3" TextWrapping="WrapWithOverflow" Text="{Binding CompilationLog}"
+                    VerticalScrollBarVisibility="Visible"/>
     </Grid>
 </Window>

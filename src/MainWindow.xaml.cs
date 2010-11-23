@@ -77,6 +77,12 @@ namespace STFUANDCODE
             }
         }
 
+        public string CompilationLog
+        {
+            get;
+            set;
+        }
+
         private Brush _parseStatusBackground;
         public Brush ParseStatusBackground
         {
@@ -130,7 +136,11 @@ namespace STFUANDCODE
                 var successfully_compiled = compiler_process.Start();
                 var compiler_messages = compiler_process.StandardOutput.ReadToEnd();
                 File.WriteAllLines("build.log", new[] { compiler_messages });
+                CompilationLog = compiler_messages;
+
                 compiler_process.WaitForExit();
+
+                FirePropertyChanged("CompilationLog");
             }
 
             if (File.Exists(executable_path))
