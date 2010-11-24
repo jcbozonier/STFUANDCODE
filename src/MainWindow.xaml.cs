@@ -144,6 +144,7 @@ public class Foo
                 compiler_process.StartInfo.Arguments = "/out:" + executable_path + " " + code_to_compile;
                 compiler_process.StartInfo.UseShellExecute = false;
                 compiler_process.StartInfo.RedirectStandardOutput = true;
+                compiler_process.StartInfo.CreateNoWindow = true;
 
                 var successfully_compiled = compiler_process.Start();
                 var compiler_messages = compiler_process.StandardOutput.ReadToEnd();
