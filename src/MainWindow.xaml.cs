@@ -36,7 +36,6 @@ namespace STFUANDCODE
             DataContext = _vm;
 
             SetBinding(STFUAndRunCodeCommandProperty, new Binding("STFUAndRunCodeCommand") { Mode = BindingMode.OneWay });
-            //this.PreviewKeyUp += (sndr, evt) => { if (evt.Key == Key.F5) STFUAndRunCode(); };
             InputBindings.Add(new KeyBinding(STFUAndRunCodeCommand, new KeyGesture(Key.F5)));
 
             InitializeEditor();
