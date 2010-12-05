@@ -15,7 +15,7 @@
             WordWrap="True"
 			BorderBrush="#CCCCCC" 
 			BorderThickness="1" />
-        <Button x:Name="RunButton" Content="STFU and Run!" Grid.Row="1" Click="RunButton_Click" />
+        <Button x:Name="RunButton" Content="STFU and Run!" Grid.Row="1" Command="{Binding STFUAndRunCodeCommand}" />
         <Border Grid.Row="2" Height="20" Background="{Binding ParseStatusBackground}">
             <TextBlock Text="{Binding ParseStatusText}" />
         </Border>
