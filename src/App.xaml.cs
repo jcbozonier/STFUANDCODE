@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
-using System.Linq;
-using System.Windows;
-using System.IO;
+﻿using System.Windows;
 
 namespace STFUANDCODE
 {
@@ -15,13 +9,9 @@ namespace STFUANDCODE
     {
         public App()
         {
-            this.Startup += (sndr, evt) =>
+            Startup += (sndr, evt) =>
             {
                 var editor = new MainWindow();
-                //var watcher = new FileSystemWatcher();
-                //watcher.Created += (sndr, evt) => { editor. };
-                //watcher.Changed += (sndr, evt) => { };
-
                 editor.Show();
             };
         }

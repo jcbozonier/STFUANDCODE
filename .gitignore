@@ -1,6 +1,12 @@
-bin
 obj
+bin
+out
+NDependOut
+_ReSharper.*
+*.user
+*.resharper
+*.ReSharper
 *.suo
-build
-Gemfile.lock
-temp
+*.cache
+*.~
+*.swp
