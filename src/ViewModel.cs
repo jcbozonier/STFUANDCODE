@@ -8,15 +8,16 @@ namespace STFUANDCODE
 {
     public class ViewModel : INotifyPropertyChanged
     {
-        private string compilationLog;
-        private ICommand stfuAndCodeCmd;
+        private Brush _parseStatusVisual;
+        private string _parseStatusText;
+        private string _code;
+        private string _compilationLog;
+        private ICommand _stfuAndCodeCmd;
 
         public ICommand StfuAndRunCodeCommand
         {
-            get { return stfuAndCodeCmd ?? (stfuAndCodeCmd = new StfuAndRunCodeCommand(this)); }
+            get { return _stfuAndCodeCmd ?? (_stfuAndCodeCmd = new StfuAndRunCodeCommand(this)); }
         }
-
-        private string _code;
 
         public string Code
         {
@@ -30,42 +31,40 @@ namespace STFUANDCODE
             }
         }
 
-        private string _parseStatusText;
-
         public string ParseStatusText
         {
             get { return _parseStatusText; }
             set
             {
-                if (string.Equals(_parseStatusText, value))
-                    return;
+                if (string.Equals(_parseStatusText, value)) return;
                 _parseStatusText = value;
-                FirePropertyChanged("ParseStatusText");
+                RaisePropertyChanged("ParseStatusText");
             }
         }
 
-        private Brush _parseStatusBackground;
-        
 
-        public Brush ParseStatusBackground
+        public Brush ParseStatusVisual
         {
-            get { return _parseStatusBackground; }
+            get { return _parseStatusVisual; }
             set
             {
-                if (value == _parseStatusBackground)
+                if (value == _parseStatusVisual)
                     return;
-                _parseStatusBackground = value;
-                FirePropertyChanged("ParseStatusBackground");
+                _parseStatusVisual = value;
+                RaisePropertyChanged("ParseStatusVisual");
             }
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        private void FirePropertyChanged(string name)
+        public string CompilationLog
         {
-            var handler = PropertyChanged;
-            if (handler != null)
-                handler(this, new PropertyChangedEventArgs(name));
+            get { return _compilationLog; }
+            set
+            {
+                _compilationLog = value;
+                RaisePropertyChanged("CompilationLog");
+            }
         }
 
         private void Parse()
@@ -82,31 +81,26 @@ namespace STFUANDCODE
         private void SetParseStatus(bool parses)
         {
             string statusText;
-            Color statusBackgroundColor;
+            string brushResource;
             if (parses)
             {
                 statusText = "Parses";
-                statusBackgroundColor = Colors.Green;
+                brushResource = "Parse";
             }
             else
             {
                 statusText = "Doesn't Parse!";
-                statusBackgroundColor = Colors.Red;
+                brushResource = "NoParse";
             }
             ParseStatusText = statusText;
-            ParseStatusBackground = new SolidColorBrush(statusBackgroundColor);
+            ParseStatusVisual = (Brush)App.Current.TryFindResource(brushResource);
         }
 
-        public string CompilationLog
+        private void RaisePropertyChanged(string name)
         {
-            get { return compilationLog; }
-            set
-            {
-                compilationLog = value;
-                FirePropertyChanged("CompilationLog");
-            }
+            var handler = PropertyChanged;
+            if (handler != null)
+                handler(this, new PropertyChangedEventArgs(name));
         }
-
-        
     }
 }

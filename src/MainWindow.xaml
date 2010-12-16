@@ -1,30 +1,63 @@
 ﻿<Window x:Class="STFUANDCODE.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:ctrl="http://icsharpcode.net/sharpdevelop/avalonedit" 
+        xmlns:avl="http://icsharpcode.net/sharpdevelop/avalonedit" 
         Title="STFU and Code .NET!" Height="300" Width="600"
-        FocusManager.FocusedElement="{Binding ElementName=Editor}" Icon="/STFUANDCODE;component/Resources/Stfu.ico">
+        FocusManager.FocusedElement="{Binding ElementName=Editor}" 
+        Icon="/STFUANDCODE;component/Resources/Stfu.ico"
+        Background="Black">
     <Window.InputBindings>
         <KeyBinding Key="F5" Command="{Binding StfuAndRunCodeCommand, Mode=OneWay}" />
     </Window.InputBindings>
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="2*" />
             <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="3*" />
+            <RowDefinition Height="5" />
             <RowDefinition Height="*"/>
+            <RowDefinition Height="30"/>
         </Grid.RowDefinitions>
-        <ctrl:TextEditor x:Name="Editor" TextChanged="OnEditorTextChanged"
+        
+        <ToolBar ToolBarTray.IsLocked="True" Margin="0" BorderBrush="Black">
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="EjectButton" Command="{Binding StfuAndRunCodeCommand}" Margin="2" Width="30" Height="30">
+                    <Image>
+                        <Image.Source>
+                            <DrawingImage Drawing="{StaticResource ResourceKey=CliButton}" />
+                        </Image.Source>
+                    </Image>
+                </Button>
+                <Button Margin="2"  Width="30" Height="30" Padding="5" Click="OnCloseClick">
+                    <Image>
+                        <Image.Source>
+                            <DrawingImage Drawing="{StaticResource ResourceKey=EjectButton}" />
+                        </Image.Source>
+                    </Image>
+                </Button>
+            </StackPanel>
+        </ToolBar>
+
+        <avl:TextEditor x:Name="Editor" TextChanged="OnEditorTextChanged"
             WordWrap="True"
-			BorderBrush="#CCCCCC" 
-			BorderThickness="1" />
-        <Button x:Name="RunButton" Content="STFU and Run!" Grid.Row="1" Command="{Binding StfuAndRunCodeCommand}" />
-        <Border Grid.Row="2" Height="20" Background="{Binding ParseStatusBackground}">
-            <TextBlock Text="{Binding ParseStatusText}" />
-        </Border>
-        <TextBox IsReadOnly="True" Grid.Row="3" 
+			BorderBrush="#000000" 
+            Grid.Row="1"
+			BorderThickness="1" VerticalScrollBarVisibility="Auto" />
+        
+        <GridSplitter Grid.Row="2" Height="5" HorizontalAlignment="Stretch" />
+        
+        <TextBox IsReadOnly="True" Grid.Row="3"
                  TextWrapping="WrapWithOverflow" 
                  Text="{Binding CompilationLog}"
+                 Foreground="White"
                  VerticalScrollBarVisibility="Auto"/>
+        <StatusBar Grid.Row="4" Background="{StaticResource ResourceKey=PressedBrush}" HorizontalAlignment="Stretch">
+            <StatusBarItem HorizontalContentAlignment="Right">
+                <Ellipse Fill="{Binding Path=ParseStatusVisual}" ToolTip="{Binding Path=ParseStatusText}" Height="24" Width="24">
+                    <Ellipse.BitmapEffect>
+                        <OuterGlowBitmapEffect GlowColor="{Binding Path=ParseStatusVisual.GradientStops[1].Color}" GlowSize="3"  />
+                    </Ellipse.BitmapEffect>
+                </Ellipse>
+            </StatusBarItem>
+        </StatusBar>
     </Grid>
 </Window>

@@ -31,6 +31,11 @@ namespace STFUANDCODE
         {
             _vm.Code = Editor.Document.Text;
         }
+
+        private void OnCloseClick(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
     }
 
 }

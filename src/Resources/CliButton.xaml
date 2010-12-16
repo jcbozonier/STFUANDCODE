@@ -1,9 +1,7 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <SolidColorBrush x:Key="CliWhiteBrush" Color="White" ></SolidColorBrush>
-    <DrawingBrush x:Key="utilitiesterminal" Stretch="Uniform">
-        <DrawingBrush.Drawing>
-            <DrawingGroup>
+            <DrawingGroup x:Key="CliButton">
                 <DrawingGroup>
                     <DrawingGroup Transform="0.0245449896901846,0,0,0.0208675786852837,46.1436882019043,39.3410911560059">
                         <GeometryDrawing Geometry="F1M-1559.252,-150.697L-219.619,-150.697 -219.619,327.660 -1559.252,327.660z">
@@ -129,6 +127,4 @@
                     </DrawingGroup>
                 </DrawingGroup>
             </DrawingGroup>
-        </DrawingBrush.Drawing>
-    </DrawingBrush>
 </ResourceDictionary>

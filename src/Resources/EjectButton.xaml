@@ -1,8 +1,6 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-    <DrawingBrush x:Key="EjectButton" Stretch="Uniform">
-        <DrawingBrush.Drawing>
-            <DrawingGroup>
+            <DrawingGroup x:Key="EjectButton">
                 <DrawingGroup>
                     <GeometryDrawing Geometry="F1M23.688,8.757L10.872,26.500 36.504,26.500 23.688,8.757z">
                         <GeometryDrawing.Pen>
@@ -77,6 +75,4 @@
                     <GeometryDrawing Brush="#8FFFFFFF" Geometry="F1M23.688,11.313L17.688,19.625C22.683,19.812,24.400,19.457,29.063,18.813L23.688,11.313z" ></GeometryDrawing>
                 </DrawingGroup>
             </DrawingGroup>
-        </DrawingBrush.Drawing>
-    </DrawingBrush>
 </ResourceDictionary>

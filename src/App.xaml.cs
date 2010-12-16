@@ -9,11 +9,11 @@ namespace STFUANDCODE
     {
         public App()
         {
-            Startup += (sndr, evt) =>
-            {
-                var editor = new MainWindow();
-                editor.Show();
-            };
+            //Startup += (sndr, evt) =>
+            //{
+            //    var editor = new MainWindow();
+            //    editor.Show();
+            //};
         }
     }
 }
