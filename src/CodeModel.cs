@@ -6,7 +6,7 @@ using ICSharpCode.NRefactory;
 
 namespace STFUANDCODE
 {
-    public class ViewModel : INotifyPropertyChanged
+    public class CodeModel : INotifyPropertyChanged
     {
         private Brush _parseStatusVisual;
         private string _parseStatusText;

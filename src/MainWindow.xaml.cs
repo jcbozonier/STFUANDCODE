@@ -11,7 +11,7 @@ namespace STFUANDCODE
     /// </summary>
     public partial class MainWindow : Window
     {
-        private readonly ViewModel _vm = new ViewModel();
+        private readonly CodeModel _vm = new CodeModel();
 
         public MainWindow()
         {

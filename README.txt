@@ -1,1 +1,1 @@
-- First update
+- Icons taken from Xamalot Tango project family

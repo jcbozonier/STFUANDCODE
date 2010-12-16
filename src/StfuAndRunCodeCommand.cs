@@ -7,9 +7,9 @@ namespace STFUANDCODE
 {
     public class StfuAndRunCodeCommand : ICommand
     {
-        private readonly ViewModel model;
+        private readonly CodeModel model;
 
-        public StfuAndRunCodeCommand(ViewModel model)
+        public StfuAndRunCodeCommand(CodeModel model)
         {
             this.model = model;
         }

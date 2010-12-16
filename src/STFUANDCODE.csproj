@@ -59,7 +59,7 @@
     </ApplicationDefinition>
     <Compile Include="Initial.cs" />
     <Compile Include="StfuAndRunCodeCommand.cs" />
-    <Compile Include="ViewModel.cs" />
+    <Compile Include="CodeModel.cs" />
     <Compile Include="WindowSizeController.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
