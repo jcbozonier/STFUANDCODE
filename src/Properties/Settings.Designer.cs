@@ -49,7 +49,7 @@ namespace STFUANDCODE.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("400")]
+        [global::System.Configuration.DefaultSettingValueAttribute("600")]
         public double Width {
             get {
                 return ((double)(this["Width"]));
@@ -61,7 +61,7 @@ namespace STFUANDCODE.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("600")]
+        [global::System.Configuration.DefaultSettingValueAttribute("500")]
         public double Height {
             get {
                 return ((double)(this["Height"]));

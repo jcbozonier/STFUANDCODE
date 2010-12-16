@@ -1,0 +1,10 @@
+﻿using System;
+
+public class Foo
+{
+    public static void Main()
+    {
+        // STFU and Code Here!
+        
+    }
+}

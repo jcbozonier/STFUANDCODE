@@ -1,0 +1,134 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <SolidColorBrush x:Key="CliWhiteBrush" Color="White" ></SolidColorBrush>
+    <DrawingBrush x:Key="utilitiesterminal" Stretch="Uniform">
+        <DrawingBrush.Drawing>
+            <DrawingGroup>
+                <DrawingGroup>
+                    <DrawingGroup Transform="0.0245449896901846,0,0,0.0208675786852837,46.1436882019043,39.3410911560059">
+                        <GeometryDrawing Geometry="F1M-1559.252,-150.697L-219.619,-150.697 -219.619,327.660 -1559.252,327.660z">
+                            <GeometryDrawing.Brush>
+                                <LinearGradientBrush StartPoint="-1051.935,-150.697" EndPoint="-1051.935,327.66" MappingMode="Absolute" SpreadMethod="Pad">
+                                    <GradientStop Color="#00000000" Offset="0" ></GradientStop>
+                                    <GradientStop Color="Black" Offset="0.5" ></GradientStop>
+                                    <GradientStop Color="#00000000" Offset="1" ></GradientStop>
+                                </LinearGradientBrush>
+                            </GeometryDrawing.Brush>
+                        </GeometryDrawing>
+                        <GeometryDrawing Geometry="F1M-219.619,-150.680C-219.619,-150.680 -219.619,327.650 -219.619,327.650 -76.745,328.551 125.781,220.481 125.781,88.454 125.781,-43.572 -33.655,-150.680 -219.619,-150.680z">
+                            <GeometryDrawing.Brush>
+                                <RadialGradientBrush Center="605.714,486.648" RadiusX="117.143" RadiusY="117.143" GradientOrigin="605.714,486.648" MappingMode="Absolute" Transform="2.77438902854919,0,0,1.9697060585022,-1891.63305664063,-872.885375976563">
+                                    <GradientStop Color="Black" Offset="0" ></GradientStop>
+                                    <GradientStop Color="#00000000" Offset="1" ></GradientStop>
+                                </RadialGradientBrush>
+                            </GeometryDrawing.Brush>
+                        </GeometryDrawing>
+                        <GeometryDrawing Geometry="F1M-1559.252,-150.680C-1559.252,-150.680 -1559.252,327.650 -1559.252,327.650 -1702.127,328.551 -1904.653,220.481 -1904.653,88.454 -1904.653,-43.572 -1745.216,-150.680 -1559.252,-150.680z">
+                            <GeometryDrawing.Brush>
+                                <RadialGradientBrush Center="605.714,486.648" RadiusX="117.143" RadiusY="117.143" GradientOrigin="605.714,486.648" MappingMode="Absolute" Transform="-2.77438902854919,0,0,1.9697060585022,112.762298583984,-872.885375976563">
+                                    <GradientStop Color="Black" Offset="0" ></GradientStop>
+                                    <GradientStop Color="#00000000" Offset="1" ></GradientStop>
+                                </RadialGradientBrush>
+                            </GeometryDrawing.Brush>
+                        </GeometryDrawing>
+                    </DrawingGroup>
+                    <GeometryDrawing Geometry="M1.503,8.353C1.503,5.674,3.675,3.502,6.354,3.502L41.647,3.502C44.326,3.502,46.499,5.674,46.499,8.353L46.499,37.649C46.499,40.328,44.326,42.500,41.647,42.500L6.354,42.500C3.675,42.500,1.503,40.328,1.503,37.649z">
+                        <GeometryDrawing.Brush>
+                            <LinearGradientBrush StartPoint="29.121,30.38" EndPoint="24.307,13.116" MappingMode="Absolute" SpreadMethod="Pad">
+                                <GradientStop Color="#FF777973" Offset="0" ></GradientStop>
+                                <GradientStop Color="#FFCBCCCA" Offset="1" ></GradientStop>
+                            </LinearGradientBrush>
+                        </GeometryDrawing.Brush>
+                        <GeometryDrawing.Pen>
+                            <Pen Thickness="1">
+                                <Pen.Brush>
+                                    <LinearGradientBrush StartPoint="7.805,5.761" EndPoint="19.918,27.581" MappingMode="Absolute" SpreadMethod="Pad">
+                                        <GradientStop Color="#FFA2A59C" Offset="0" ></GradientStop>
+                                        <GradientStop Color="#FF535750" Offset="1" ></GradientStop>
+                                    </LinearGradientBrush>
+                                </Pen.Brush>
+                            </Pen>
+                        </GeometryDrawing.Pen>
+                    </GeometryDrawing>
+                    <GeometryDrawing Geometry="M5.496,9.128C5.496,8.219,6.233,7.483,7.141,7.483L40.939,7.483C41.848,7.483,42.584,8.219,42.584,9.128L42.584,34.860C42.584,35.768,41.848,36.505,40.939,36.505L7.141,36.505C6.233,36.505,5.496,35.768,5.496,34.860z">
+                        <GeometryDrawing.Brush>
+                            <LinearGradientBrush StartPoint="22.711,9.012" EndPoint="22.067,32.808" MappingMode="Absolute" SpreadMethod="Pad">
+                                <GradientStop Color="#FF748F48" Offset="0" ></GradientStop>
+                                <GradientStop Color="#FF1F2816" Offset="1" ></GradientStop>
+                            </LinearGradientBrush>
+                        </GeometryDrawing.Brush>
+                        <GeometryDrawing.Pen>
+                            <Pen Thickness="0.995">
+                                <Pen.Brush>
+                                    <LinearGradientBrush StartPoint="5.629,1.642" EndPoint="20.723,22.626" MappingMode="Absolute" SpreadMethod="Pad">
+                                        <GradientStop Color="#FF616161" Offset="0" ></GradientStop>
+                                        <GradientStop Color="#FFA0A0A0" Offset="1" ></GradientStop>
+                                    </LinearGradientBrush>
+                                </Pen.Brush>
+                            </Pen>
+                        </GeometryDrawing.Pen>
+                    </GeometryDrawing>
+                    <DrawingGroup>
+                        <GeometryDrawing Geometry="F1M8.015,11.500L39.994,11.500 M8.015,13.500L39.994,13.500 M8.015,15.500L39.994,15.500 M8.015,17.500L39.994,17.500 M8.015,19.500L39.994,19.500 M8.015,21.500L39.994,21.500 M8.015,23.500L39.994,23.500 M8.015,25.500L39.994,25.500 M8.015,27.500L39.994,27.500 M8.015,29.500L39.994,29.500 M8.015,31.500L39.994,31.500 M8.015,33.500L39.994,33.500">
+                            <GeometryDrawing.Pen>
+                                <Pen Brush="#FF181F10" Thickness="1.001" MiterLimit="4" ></Pen>
+                            </GeometryDrawing.Pen>
+                        </GeometryDrawing>
+                    </DrawingGroup>
+                    <GeometryDrawing Geometry="M2.554,8.292C2.554,6.198,4.252,4.501,6.345,4.501L41.708,4.501C43.802,4.501,45.499,6.198,45.499,8.292L45.499,37.710C45.499,39.804,43.802,41.501,41.708,41.501L6.345,41.501C4.252,41.501,2.554,39.804,2.554,37.710z">
+                        <GeometryDrawing.Pen>
+                            <Pen Thickness="1">
+                                <Pen.Brush>
+                                    <LinearGradientBrush StartPoint="17.98,15.318" EndPoint="45.162,43.843" MappingMode="Absolute" SpreadMethod="Pad">
+                                        <GradientStop Color="White" Offset="0" ></GradientStop>
+                                        <GradientStop Color="Transparent" Offset="1" ></GradientStop>
+                                    </LinearGradientBrush>
+                                </Pen.Brush>
+                            </Pen>
+                        </GeometryDrawing.Pen>
+                    </GeometryDrawing>
+                    <GeometryDrawing Brush="{StaticResource CliWhiteBrush}" Geometry="F1M11.625,20.679L11.625,17.625 20.610,21.686 20.610,23.542 11.625,27.629 11.625,24.584 18.589,22.730 11.625,20.679z M30.518,30.706L30.518,32.680 19.614,32.680 19.614,30.706 30.518,30.706">
+                        <GeometryDrawing.Pen>
+                            <Pen Brush="#476ED66E" Thickness="1.333" MiterLimit="4" ></Pen>
+                        </GeometryDrawing.Pen>
+                    </GeometryDrawing>
+                    <GeometryDrawing Geometry="F1M7.625,8.000C7.102,8.000,6.052,8.190,6.052,9.026L6.170,25.543C23.842,24.579,20.294,17.286,42.000,13.633L41.937,9.291C41.859,8.166,41.398,8.059,40.327,8.066L7.625,8.000z">
+                        <GeometryDrawing.Brush>
+                            <LinearGradientBrush StartPoint="13.124,4.313" EndPoint="20.179,26.781" MappingMode="Absolute" SpreadMethod="Pad">
+                                <GradientStop Color="White" Offset="0" ></GradientStop>
+                                <GradientStop Color="#00FCFCFF" Offset="1" ></GradientStop>
+                            </LinearGradientBrush>
+                        </GeometryDrawing.Brush>
+                    </GeometryDrawing>
+                    <GeometryDrawing Geometry="M6.989,9.098C6.989,9.033,7.042,8.981,7.107,8.981L40.898,8.981C40.963,8.981,41.015,9.033,41.015,9.098L41.015,34.920C41.015,34.985,40.963,35.038,40.898,35.038L7.107,35.038C7.042,35.038,6.989,34.985,6.989,34.920z">
+                        <GeometryDrawing.Pen>
+                            <Pen Brush="#B6000000" Thickness="2" ></Pen>
+                        </GeometryDrawing.Pen>
+                    </GeometryDrawing>
+                    <GeometryDrawing Geometry="M35.486,38.075C35.486,37.766,35.646,37.515,35.844,37.515L39.147,37.515C39.345,37.515,39.506,37.766,39.506,38.075L39.506,39.914C39.506,40.223,39.345,40.474,39.147,40.474L35.844,40.474C35.646,40.474,35.486,40.223,35.486,39.914z">
+                        <GeometryDrawing.Brush>
+                            <RadialGradientBrush Center="36.996,25.677" RadiusX="2.51" RadiusY="2.51" GradientOrigin="36.996,25.677" MappingMode="Absolute" Transform="1,0,0,0.737789988517761,0,9.84432125091553">
+                                <GradientStop Color="#FF777973" Offset="0" ></GradientStop>
+                                <GradientStop Color="#00777973" Offset="1" ></GradientStop>
+                            </RadialGradientBrush>
+                        </GeometryDrawing.Brush>
+                        <GeometryDrawing.Pen>
+                            <Pen Thickness="1">
+                                <Pen.Brush>
+                                    <LinearGradientBrush StartPoint="4.768,3.571" EndPoint="0.966,0.355" MappingMode="Absolute" SpreadMethod="Pad">
+                                        <GradientStop Color="#FFA9AAA7" Offset="0" ></GradientStop>
+                                        <GradientStop Color="#FF676964" Offset="1" ></GradientStop>
+                                    </LinearGradientBrush>
+                                </Pen.Brush>
+                            </Pen>
+                        </GeometryDrawing.Pen>
+                    </GeometryDrawing>
+                    <GeometryDrawing Brush="#FF93D94C" Geometry="M32.000,38.560C32.000,38.251,32.251,38.000,32.560,38.000L33.440,38.000C33.749,38.000,34.000,38.251,34.000,38.560L34.000,39.440C34.000,39.749,33.749,40.000,33.440,40.000L32.560,40.000C32.251,40.000,32.000,39.749,32.000,39.440z" ></GeometryDrawing>
+                    <DrawingGroup Transform="1,0,0,1,4.375,-0.0625">
+                        <GeometryDrawing Brush="{StaticResource CliWhiteBrush}" Geometry="F1M28.875,38.750A0.563,0.563,0.000,1,1,27.750,38.750A0.563,0.563,0.000,1,1,28.875,38.750z" ></GeometryDrawing>
+                    </DrawingGroup>
+                </DrawingGroup>
+            </DrawingGroup>
+        </DrawingBrush.Drawing>
+    </DrawingBrush>
+</ResourceDictionary>
