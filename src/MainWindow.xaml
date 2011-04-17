@@ -34,6 +34,9 @@
                         </Image.Source>
                     </Image>
                 </Button>
+                <Button Margin="2" ToolTip="STFU and SHARE" Command="{Binding StfuAndShareCodeCommand}" Content="STFU and SHARE!" Height="30" Padding="5" />
+                <TextBox Width="234" Text="{Binding SharedLocation}" />
+                <!--<Button Margin="2" ToolTip="STFU and LOAD" Command="{Binding StfuAndLoadCodeCommand}" Content="STFU and LOAD!" Height="30" Padding="5" />-->
             </StackPanel>
         </ToolBar>
 

@@ -60,9 +60,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="GitHub.cs" />
     <Compile Include="Initial.cs" />
-    <Compile Include="StfuAndRunCodeCommand.cs" />
+    <Compile Include="ViewCommands\StfuAndLoadCodeCommand.cs" />
+    <Compile Include="ViewCommands\StfuAndRunCodeCommand.cs" />
     <Compile Include="CodeModel.cs" />
+    <Compile Include="ViewCommands\StfuAndShareCodeCommand.cs" />
     <Compile Include="WindowSizeController.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>

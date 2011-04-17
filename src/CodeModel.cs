@@ -3,6 +3,7 @@ using System.Windows.Media;
 using System.Windows.Input;
 using System.IO;
 using ICSharpCode.NRefactory;
+using STFUANDCODE.ViewCommands;
 
 namespace STFUANDCODE
 {
@@ -13,10 +14,45 @@ namespace STFUANDCODE
         private string _code;
         private string _compilationLog;
         private ICommand _stfuAndCodeCmd;
+        private string _SharedLocation;
+
+        public CodeModel()
+        {
+          StfuAndShareCodeCommand = new StfuAndShareCodeCommand(this);
+          StfuAndLoadCodeCommand = new StfuAndLoadCodeCommand(this);
+        }
+
+        public string SharedLocation 
+        {
+          get
+          {
+            return _SharedLocation;
+          }
+          set
+          {
+            _SharedLocation = value;
+            RaisePropertyChanged("SharedLocation");
+          }
+        }
+
+        public ICommand StfuAndLoadCodeCommand
+        {
+          get;
+          set;
+        }
+
+        public ICommand StfuAndShareCodeCommand
+        {
+          get;
+          private set;
+        }
 
         public ICommand StfuAndRunCodeCommand
         {
-            get { return _stfuAndCodeCmd ?? (_stfuAndCodeCmd = new StfuAndRunCodeCommand(this)); }
+            get 
+            { 
+              return _stfuAndCodeCmd ?? (_stfuAndCodeCmd = new StfuAndRunCodeCommand(this)); 
+            }
         }
 
         public string Code
