@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows;
+using System.Windows.Controls.Primitives;
 using System.Windows.Data;
 using System.Windows.Input;
 using ICSharpCode.AvalonEdit.Highlighting;
@@ -32,9 +33,20 @@ namespace STFUANDCODE
             _vm.Code = Editor.Document.Text;
         }
 
-        private void OnCloseClick(object sender, RoutedEventArgs e)
+        private void CloseCommand_CanExecute(object sender, CanExecuteRoutedEventArgs e)
+        {
+            e.CanExecute = true;
+        }
+
+        private void CloseCommand_Executed(object sender, ExecutedRoutedEventArgs e)
         {
             Close();
+        }
+
+        private void ToggleButton_CheckedChanged(object sender, RoutedEventArgs e)
+        {
+            var toggleButton = ((ToggleButton) sender);
+            Editor.ShowLineNumbers = toggleButton.IsChecked.HasValue && toggleButton.IsChecked.Value;
         }
     }
 

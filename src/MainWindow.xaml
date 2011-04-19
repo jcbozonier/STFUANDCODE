@@ -6,8 +6,12 @@
         FocusManager.FocusedElement="{Binding ElementName=Editor}" 
         Icon="/STFUANDCODE;component/Resources/Stfu.ico"
         Background="Black">
+    <Window.CommandBindings>
+        <CommandBinding Command="Close" CanExecute="CloseCommand_CanExecute" Executed="CloseCommand_Executed" />
+    </Window.CommandBindings>
     <Window.InputBindings>
         <KeyBinding Key="F5" Command="{Binding StfuAndRunCodeCommand, Mode=OneWay}" />
+        <KeyBinding Key="F4" Modifiers="Alt" Command="Close" />
     </Window.InputBindings>
     <Grid>
         <Grid.RowDefinitions>
@@ -27,13 +31,25 @@
                         </Image.Source>
                     </Image>
                 </Button>
-                <Button Margin="2" ToolTip="STFU and QUIT" Width="30" Height="30" Padding="5" Click="OnCloseClick">
+                <Button Margin="2" ToolTip="STFU and QUIT" Width="30" Height="30" Padding="5" Command="Close">
                     <Image>
                         <Image.Source>
                             <DrawingImage Drawing="{StaticResource ResourceKey=EjectButton}" />
                         </Image.Source>
                     </Image>
                 </Button>
+                <ToggleButton Margin="2" ToolTip="What's My Line, Yo!?" Width="30" Height="30" Padding="5" Checked="ToggleButton_CheckedChanged" Unchecked="ToggleButton_CheckedChanged">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <TextBlock Grid.Row="0" Text="1 __" Foreground="White" FontFamily="Consolas" FontSize="7" />
+                        <TextBlock Grid.Row="1" Text="2 __" Foreground="White" FontFamily="Consolas" FontSize="7" />
+                        <TextBlock Grid.Row="2" Text="3 __" Foreground="White" FontFamily="Consolas" FontSize="7" />
+                    </Grid>
+                </ToggleButton>
             </StackPanel>
         </ToolBar>
 
