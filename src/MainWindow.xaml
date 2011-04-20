@@ -64,11 +64,11 @@
         
         <GridSplitter Grid.Row="2" Height="5" HorizontalAlignment="Stretch" />
         
-        <TextBox IsReadOnly="True" Grid.Row="3"
+        <TextBox IsReadOnly="True" IsReadOnlyCaretVisible="True" Grid.Row="3"
                  TextWrapping="WrapWithOverflow" 
                  Text="{Binding CompilationLog}"
                  Foreground="White"
-                 VerticalScrollBarVisibility="Auto"/>
+                 VerticalScrollBarVisibility="Auto" SelectionChanged="TextBox_SelectionChanged"/>
         <StatusBar Grid.Row="4" Background="{StaticResource ResourceKey=PressedBrush}" HorizontalAlignment="Stretch">
             <StatusBarItem HorizontalContentAlignment="Right">
                 <Ellipse Fill="{Binding Path=ParseStatusVisual}" ToolTip="{Binding Path=ParseStatusText}" Height="24" Width="24">

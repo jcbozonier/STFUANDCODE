@@ -36,7 +36,7 @@ namespace STFUANDCODE
                 compilerProcess.Start();
                 var compilerMessages = compilerProcess.StandardOutput.ReadToEnd();
                 compilerProcess.WaitForExit();
-                File.WriteAllLines("build.log", new[] { compilerMessages });
+                //File.WriteAllLines("build.log", new[] { compilerMessages });
                 model.CompilationLog = compilerMessages;
             }
 
